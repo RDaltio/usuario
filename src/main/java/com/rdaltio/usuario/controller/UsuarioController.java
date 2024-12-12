@@ -52,7 +52,7 @@ public class UsuarioController {
     }
 
     @PutMapping("/endereco")
-    public ResponseEntity<EnderecoDTO> atualizaEndeneco(@RequestBody EnderecoDTO dto,
+    public ResponseEntity<EnderecoDTO> atualizaEndereco(@RequestBody EnderecoDTO dto,
                                                         @RequestParam("id") Long id){
         return ResponseEntity.ok(usuarioService.atualizaEndereco(id, dto));
     }
@@ -64,7 +64,7 @@ public class UsuarioController {
     }
 
     @PostMapping("/endereco")
-    public ResponseEntity<EnderecoDTO> cadastraEndeneco(@RequestBody EnderecoDTO dto,
+    public ResponseEntity<EnderecoDTO> cadastraEndereco(@RequestBody EnderecoDTO dto,
                                                         @RequestHeader("Authorization") String token){
         return ResponseEntity.ok(usuarioService.cadastraEndereco(token, dto));
     }
